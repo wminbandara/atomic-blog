@@ -65,7 +65,7 @@ function App() {
 
         <Header />
         <Main />
-        <Archive onAddPost={handleAddPost} />
+        <Archive />
         <Footer />
       </section>
     </PostContext.Provider>
@@ -126,6 +126,7 @@ function Posts() {
 }
 
 function FormAddPost() {
+  const { onAddPost } = useContext(PostContext);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
